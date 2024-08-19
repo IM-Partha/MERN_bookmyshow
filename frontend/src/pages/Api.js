@@ -2,11 +2,11 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const API_URL = "http://localhost:8080";
+
 
 /////////////// For Booking///////////////////////////////
 export const HandelCreate = async (obj) => {
-  const URL = `${API_URL}/api/booking`;
+  const URL = `https://mern-bookmyshow.vercel.app/api/booking`;
 
   try {
     const response = await axios.post(URL, obj, {
@@ -25,7 +25,7 @@ export const HandelCreate = async (obj) => {
 //////////////////////// For Booking History///////////////////
 
 export const HandelGateData = async () => {
-  const URL = `${API_URL}/api/booking`;
+  const URL = `https://mern-bookmyshow.vercel.app/api/booking`;
   try {
     const response = await axios.get(URL, {
       headers: {
